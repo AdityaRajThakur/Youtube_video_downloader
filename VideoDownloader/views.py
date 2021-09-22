@@ -2,9 +2,12 @@ from django.shortcuts import redirect, render
 from pytube import YouTube
 from django.contrib import messages
 # Create your views here.
+
 def convert(url):
+    #provide the location for download
+    LOC= ""
     yt = YouTube(url)
-    yt.streams.get_by_resolution('360p').download("C:\\Users\\Administrator\\Desktop\\ourprojectdownloader")
+    yt.streams.get_by_resolution('360p').download(LOC)
 
 
 
